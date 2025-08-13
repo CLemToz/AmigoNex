@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .masonry-gallery {
+            height: 700px;
+            column-gap: 20px;
+            column-fill: initial;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .masonry-item {
+            display: inline-block;
+            margin-bottom: 20px;
+            break-inside: avoid;
+            width: 100%;
+        }
+
+        .masonry-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .masonry-item img:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="masonry-gallery">
+        <!-- Images will be added here -->
+        <!-- You can add as many as you want, the script will handle them -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const gallery = document.querySelector('.masonry-gallery');
+            const targetHeight = 700;
+            const gap = 20;
+
+            // Sample images - replace with your actual image paths
+            const imagePaths = [
+                'image1.jpg',
+                'image2.jpg',
+                'image3.jpg',
+                'image4.jpg',
+                'image5.jpg',
+                'image6.jpg',
+                'image7.jpg',
+                'image8.jpg',
+                // Add more images as needed
+            ];
+
+            // Create image elements
+            imagePaths.forEach(path => {
+                const item = document.createElement('div');
+                item.className = 'masonry-item';
+
+                const img = document.createElement('img');
+                img.src = path;
+                img.alt = 'Gallery image';
+
+                item.appendChild(img);
+                gallery.appendChild(item);
+            });
+
+            // Calculate optimal column count based on viewport width
+            function setupMasonry() {
+                const viewportWidth = window.innerWidth;
+                let columnWidth = 300; // Default column width
+
+                // Adjust column width for different screen sizes
+                if (viewportWidth >= 1200) {
+                    columnWidth = 300;
+                } else if (viewportWidth >= 800) {
+                    columnWidth = 250;
+                } else if (viewportWidth >= 600) {
+                    columnWidth = 200;
+                } else {
+                    columnWidth = 150;
+                }
+
+                const columnCount = Math.floor((viewportWidth - 40) / (columnWidth + gap));
+                const actualColumnWidth = ((viewportWidth - 40) - (columnCount - 1) * gap) / columnCount;
+
+                gallery.style.columnCount = columnCount;
+                gallery.style.columnWidth = `${actualColumnWidth}px`;
+            }
+
+            // Initial setup
+            setupMasonry();
+
+            // Recalculate on window resize
+            window.addEventListener('resize', setupMasonry);
+        });
+    </script>
+</body>
+
+</html>
