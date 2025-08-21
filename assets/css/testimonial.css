@@ -136,6 +136,39 @@
   font-size: 14px;
 }
 
+.amigo-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+}
+
+.star.half {
+  position: relative;
+}
+
+.rating-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-left: 4px;
+}
+
+/* For empty stars (if needed) */
+.star.empty path {
+  fill: #e5e7eb;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .magazine-grid {

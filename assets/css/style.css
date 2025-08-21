@@ -5496,7 +5496,7 @@ ul.wp-block-latest-posts li:last-child {
 }
 @media (max-width: 575px) {
   .header-layout2 .sticky-wrapper {
-    padding: 15px 0px;
+    padding: 0px 0px;
   }
 }
 
@@ -6226,13 +6226,14 @@ ul.wp-block-latest-posts li:last-child {
     position: inherit;
   }
   .hero-2 .hero-2-thumb img {
-    height: auto;
+    height: 350px;
+    padding-top: 100px;
   }
   .hero-style2 .hero-title {
-    font-size: 40px;
+    font-size: 35px;
   }
   .hero-style2 {
-    padding: 80px 0 72px;
+    padding: 40px 0 72px;
   }
   .hero-style2 .btn {
     margin-bottom: 33px;
@@ -6241,7 +6242,7 @@ ul.wp-block-latest-posts li:last-child {
 /* Extra small devices */
 @media (max-width: 375px) {
   .hero-style2 .hero-title {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 /* Hero 3 ---------------------------------- */
