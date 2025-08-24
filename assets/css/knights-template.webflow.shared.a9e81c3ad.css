@@ -21,6 +21,16 @@
   color: #fff;
   padding-bottom: 40px;
 }
+.footer-top div
+{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer-top div:not(:first-child) {
+  /* your styles here */
+  background: red;
+}
 
 .contact-info:hover
 {
