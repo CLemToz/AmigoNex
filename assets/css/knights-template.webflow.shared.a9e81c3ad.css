@@ -7,7 +7,24 @@
 
 .footer-section {
   background-color: black;
+  font-family: var(--title-font);
   padding-top: 100px;
+}
+
+.footer-peragraph
+{
+  font-family: var(--title-font);
+}
+
+.contact-info
+{
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+.contact-info:hover
+{
+  color: #c6fb15;
 }
 
 .footer-top {
@@ -46,7 +63,7 @@
 }
 
 .footer-link:hover {
-  color: var(--primary-color);
+  color: #c6fb15;
 }
 
 .footer-about {
