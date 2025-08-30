@@ -8951,6 +8951,12 @@ blockquote p {
   padding: 40px 36px;
   /* Medium devices */
 }
+
+.feature-card:hover{
+  background-color: var(--theme-color);
+  transition: all 0.1s ease-in-out;
+}
+
 .feature-card-icon {
   margin-bottom: 74px;
 }
