@@ -8949,6 +8949,8 @@ blockquote p {
 .feature-card {
   background: var(--smoke-color);
   padding: 40px 36px;
+  border: solid 2px #cfcfcf37;
+  height: 402px;
   /* Medium devices */
 }
 
